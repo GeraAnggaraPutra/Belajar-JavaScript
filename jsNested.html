@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Perulangan Bersarang (Nested)</title>
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+var ulangi = confirm("apakah anda ingin mengulang?");
+var counter = 0;
+
+while (ulangi) {
+    counter++;
+    var bintang = "*".repeat(counter) + "<br>";
+    document.write(counter + ": " + bintang);
+    ulangi = confirm("apakah anda ingin mengulang?");
+}
+
+document.write("<hr>");
+
+for(let i = 0; i < 2; i++){
+    for(let j = 0; j < 3; j++){
+        document.write("<p>Perulangan ke " + i + "," + j + "</p>");
+    }
+}
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>ForEach</title>
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+var languages = ["Javascript", "HTML", "CSS", "Typescript"];
+
+for(i = 0; i < languages.length; i++){
+    document.write(i+". "+ languages[i] + "<br/>");
+}
+
+document.write("<hr>");
+/*Perulangan ini dapat dibuat lebih sederhana lagi dengan menggunakan operator in seperti ini:*/
+var languages = ["Javascript", "HTML", "CSS", "Typescript"];
+
+for(i in languages){
+    document.write(i+". "+ languages[i] + "<br/>");
+}
+document.write("<hr>");
+
+// kita punya array seperti berikut
+var days = ["Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu", "Minggu"];
+
+// Kemudian kita tampilkan semua hari
+// dengan menggunakan method foreach
+days.forEach(function(day){
+    document.write("<p>" + day + "</p>");
+});
+/*Method forEach() memiliki parameter berupa fungsi callback. Sebenarnya kita juga bisa menggunakan arrow function seperti ini:*/
+document.write("<hr>");
+// kita punya array seperti berikut
+var days = ["Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu", "Minggu"];
+
+// Kemudian kita tampilkan semua hari
+// dengan menggunakan method foreach
+days.forEach((day) => {
+    document.write("<p>" + day + "</p>");
+});
+    </script>
+  </body>
+</html>

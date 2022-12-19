@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Objek</title>
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      var person = {
+            firstName: "Gera",
+            lastName: "Anggara",
+            showName: function(){
+                alert(`Nama: ${this.firstName} ${this.lastName}`);
+            }
+        };
+        person.showName();
+        
+            function Person(firstName, lastName){
+            // properti
+            this.firstName = firstName;
+            this.lastName = lastName;
+
+            // method
+            this.fullName = function(){
+                return `${this.firstName} ${this.lastName}`
+            }
+            this.showName = function(){
+                document.write(this.fullName());
+            }
+        }
+
+        var person1 = new Person("Anggara", "Gera");
+        var person2 = new Person("Gera", "Anggara");
+
+        person1.showName();
+        document.write("<br>");
+        person2.showName();
+    </script>
+  </body>
+</html>
